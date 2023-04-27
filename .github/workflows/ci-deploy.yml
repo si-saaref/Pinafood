@@ -5,6 +5,9 @@ on:
     branches:
       - 'master'
 
+permissions:
+  content: 'write'
+
 jobs:
   build:
     name: Build App
