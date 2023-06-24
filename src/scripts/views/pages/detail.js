@@ -1,4 +1,5 @@
 import RestaurantServices from '../../data/data-source';
+import UrlParser from '../../routes/url-parser';
 import { cardRestoItemTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -11,8 +12,9 @@ const Detail = {
 	},
 
 	async afterRender() {
-		// const restaurants = await RestaurantServices.getRestaurantList();
-		// console.log('RESTAURATNS => ', restaurants);
+		const url = UrlParser.parseActiveUrlWithoutCombiner();
+		const restaurant = await RestaurantServices.getDetailRestaurant(url.id);
+		console.log('RESTAURATNS => ', restaurant);
 		// const restaurantListContainer = document.querySelector('.content-post');
 		// restaurantListContainer.innerHTML = '';
 		// restaurants.forEach((item) => {
