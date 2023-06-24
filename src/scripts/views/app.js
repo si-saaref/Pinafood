@@ -1,14 +1,17 @@
 import DrawerInitiator from '../utils/drawer-initiator';
+import HeaderInitiator from '../utils/header-initiator';
 // import UrlParser from '../routes/url-parser';
 // import routes from '../routes/routes';
 
 class App {
-	constructor({ button, drawer, mainContent, heroImage, header }) {
+	constructor({ button, drawer, mainContent, heroImage, header, appLogo, navList }) {
 		this.__button = button;
 		this.__drawer = drawer;
 		this.__mainContent = mainContent;
 		this.__heroImage = heroImage;
 		this.__header = header;
+		this.__appLogo = appLogo;
+		this.__navList = navList;
 	}
 
 	initialAppShell() {
@@ -18,6 +21,13 @@ class App {
 			mainContent: this.__mainContent,
 			heroImage: this.__heroImage,
 			header: this.__header,
+		});
+
+		HeaderInitiator.init({
+			header: this.__header,
+			appLogo: this.__appLogo,
+			drawer: this.__drawer,
+			navList: this.__navList,
 		});
 	}
 
