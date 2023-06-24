@@ -4,7 +4,7 @@ import DrawerInitiator from '../utils/drawer-initiator';
 import HeaderInitiator from '../utils/header-initiator';
 
 class App {
-	constructor({ button, drawer, mainContent, heroImage, header, appLogo, navList }) {
+	constructor({ button, drawer, mainContent, heroImage, header, appLogo, navList, footer }) {
 		this.__button = button;
 		this.__drawer = drawer;
 		this.__mainContent = mainContent;
@@ -12,6 +12,7 @@ class App {
 		this.__header = header;
 		this.__appLogo = appLogo;
 		this.__navList = navList;
+		this.__footer = footer;
 	}
 
 	initialAppShell() {
@@ -28,6 +29,8 @@ class App {
 			appLogo: this.__appLogo,
 			drawer: this.__drawer,
 			navList: this.__navList,
+			heroImage: this.__heroImage,
+			footer: this.__footer,
 		});
 	}
 

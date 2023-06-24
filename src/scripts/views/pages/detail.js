@@ -1,6 +1,6 @@
 import RestaurantServices from '../../data/data-source';
 import UrlParser from '../../routes/url-parser';
-import { cardRestoItemTemplate } from '../templates/template-creator';
+import { restoDetailItemTemplate } from '../templates/template-creator';
 
 const Detail = {
 	async render() {
@@ -15,13 +15,13 @@ const Detail = {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
 		const restaurant = await RestaurantServices.getDetailRestaurant(url.id);
 		console.log('RESTAURATNS => ', restaurant);
-		// const restaurantListContainer = document.querySelector('.content-post');
-		// restaurantListContainer.innerHTML = '';
+		const restaurantDetailContainer = document.querySelector('.content-post');
+		restaurantDetailContainer.innerHTML += restoDetailItemTemplate(restaurant);
 		// restaurants.forEach((item) => {
 		// 	restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
 		// });
 		const heroImage = document.querySelector('.hero');
-		heroImage.style.display = 'block';
+		heroImage.style.display = 'none';
 	},
 };
 

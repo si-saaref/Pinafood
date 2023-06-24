@@ -11,6 +11,7 @@ const app = new App({
 	header: document.querySelector('.header'),
 	appLogo: document.querySelector('.header h1'),
 	navList: document.querySelectorAll('.header a'),
+	footer: document.querySelector('.footer'),
 });
 
 app.initialAppShell();
