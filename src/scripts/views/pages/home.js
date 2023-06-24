@@ -21,6 +21,9 @@ const Home = {
 		restaurants.forEach((item) => {
 			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
 		});
+
+		const heroImage = document.querySelector('.hero');
+		heroImage.style.display = 'block';
 	},
 };
 
