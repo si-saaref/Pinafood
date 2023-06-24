@@ -15,11 +15,10 @@ const Home = {
 
 	async afterRender() {
 		const restaurants = await RestaurantServices.getRestaurantList();
+		console.log('RESTAURATNS => ', restaurants);
 		const restaurantListContainer = document.querySelector('.content-post');
 		restaurantListContainer.innerHTML = '';
-		console.log('FIRED');
 		restaurants.forEach((item) => {
-			console.log('FIRED');
 			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
 		});
 	},
