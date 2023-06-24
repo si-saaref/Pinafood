@@ -1,4 +1,4 @@
-export const cardRestoItemTemplate = () => `
+export const cardRestoItemTemplate = (restaurant) => `
   <article class="post-item" tabindex="0">
     <img
       class="post-item__thumbnail"

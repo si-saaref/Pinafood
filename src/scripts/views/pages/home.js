@@ -1,4 +1,5 @@
 import RestaurantServices from '../../data/data-source';
+import { cardRestoItemTemplate } from '../templates/template-creator';
 
 const Home = {
 	async render() {
@@ -13,9 +14,14 @@ const Home = {
 	},
 
 	async afterRender() {
-		console.log('FIRED HOME RENDER');
 		const restaurants = await RestaurantServices.getRestaurantList();
-		console.log('RESTAURANTS =>', restaurants);
+		const restaurantListContainer = document.querySelector('.content-post');
+		restaurantListContainer.innerHTML = '';
+		console.log('FIRED');
+		restaurants.forEach((item) => {
+			console.log('FIRED');
+			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
+		});
 	},
 };
 
