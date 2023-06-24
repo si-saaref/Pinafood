@@ -2,7 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/css-starter.css';
 import '../styles/main.css';
 import App from './views/app';
-import swRegister from './views/pages/sw-register';
+import swRegister from './utils/sw-register';
 
 const app = new App({
 	button: document.querySelector('.hamburger-wrapper'),
@@ -23,5 +23,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
 	app.renderPage();
-	swRegister();
+	// swRegister();
 });
