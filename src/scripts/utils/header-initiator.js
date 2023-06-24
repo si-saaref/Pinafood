@@ -1,6 +1,5 @@
 const HeaderInitiator = {
 	init({ header, appLogo, navList, drawer }) {
-		console.log(navList);
 		document.addEventListener('scroll', function () {
 			if (window.scrollY > 50) {
 				header.style.backgroundColor = 'white';

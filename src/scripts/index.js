@@ -14,3 +14,12 @@ const app = new App({
 });
 
 app.initialAppShell();
+
+window.addEventListener('hashchange', () => {
+	app.renderPage();
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+	app.renderPage();
+	// swRegister();
+});
