@@ -1,7 +1,7 @@
+import routes from '../routes/routes';
+import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
 import HeaderInitiator from '../utils/header-initiator';
-// import UrlParser from '../routes/url-parser';
-// import routes from '../routes/routes';
 
 class App {
 	constructor({ button, drawer, mainContent, heroImage, header, appLogo, navList }) {
@@ -32,10 +32,10 @@ class App {
 	}
 
 	async renderPage() {
-		// const url = UrlParser.parseActiveUrlWithCombiner();
-		// const page = routes[url];
-		// this.__mainContent.innerHTML = await page.render();
-		// await page.afterRender();
+		const url = UrlParser.parseActiveUrlWithCombiner();
+		const page = routes[url];
+		this.__mainContent.innerHTML = await page.render();
+		await page.afterRender();
 	}
 }
 
