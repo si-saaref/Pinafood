@@ -1,18 +1,29 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/css-starter.css';
 import '../styles/main.css';
+import App from './views/app';
 
-document.querySelector('.hamburger-wrapper').addEventListener('click', function (evt) {
-	evt.stopPropagation();
-	document.querySelector('#drawer').classList.toggle('active');
+const app = new App({
+	button: document.querySelector('.hamburger-wrapper'),
+	drawer: document.querySelector('#drawer'),
+	mainContent: document.querySelector('.main'),
+	heroImage: document.querySelector('.hero'),
+	header: document.querySelector('.header'),
 });
 
-['.hero', '.main', '.header'].forEach((item) => {
-	document.querySelector(`${item}`).addEventListener('click', function (evt) {
-		evt.stopPropagation();
-		document.getElementById('drawer').classList.remove('active');
-	});
-});
+app.initialAppShell();
+
+// document.querySelector('.hamburger-wrapper').addEventListener('click', function (evt) {
+// 	evt.stopPropagation();
+// 	document.querySelector('#drawer').classList.toggle('active');
+// });
+
+// ['.hero', '.main', '.header'].forEach((item) => {
+// 	document.querySelector(`${item}`).addEventListener('click', function (evt) {
+// 		evt.stopPropagation();
+// 		document.getElementById('drawer').classList.remove('active');
+// 	});
+// });
 
 document.addEventListener('scroll', function () {
 	if (window.scrollY > 50) {
@@ -30,11 +41,11 @@ document.addEventListener('scroll', function () {
 	}
 });
 
-const mediaQuery = window.matchMedia('(min-width: 768px)');
-function handleCloseDrawerOnDesktop(e) {
-	if (e.matches) {
-		document.querySelector('#drawer').classList.remove('active');
-	}
-}
-mediaQuery.addListener(handleCloseDrawerOnDesktop);
-handleCloseDrawerOnDesktop(mediaQuery);
+// const mediaQuery = window.matchMedia('(min-width: 768px)');
+// function handleCloseDrawerOnDesktop(e) {
+// 	if (e.matches) {
+// 		document.querySelector('#drawer').classList.remove('active');
+// 	}
+// }
+// mediaQuery.addListener(handleCloseDrawerOnDesktop);
+// handleCloseDrawerOnDesktop(mediaQuery);
