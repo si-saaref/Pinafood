@@ -4,7 +4,7 @@ import { cardRestoItemTemplate } from '../templates/template-creator';
 const Home = {
 	async render() {
 		return `
-      <section>
+      <section class='content-container'>
 				<div class="content-header">
 					<header class="content-header__label">Explore Restaurant</header>
 				</div>

@@ -2,7 +2,6 @@ const HeaderInitiator = {
 	init({ header, appLogo, navList, drawer, heroImage, footer }) {
 		document.addEventListener('scroll', () => {
 			const { display: isShownHero } = getComputedStyle(heroImage);
-			console.log(footer);
 			if (isShownHero === 'none') {
 				this.__showBlackHeader({ header, appLogo, navList, drawer, footer });
 				header.style.position = 'sticky';

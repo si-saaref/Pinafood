@@ -5,8 +5,7 @@ import { restoDetailItemTemplate } from '../templates/template-creator';
 const Detail = {
 	async render() {
 		return `
-      <section>
-				<div class="content-post"></div>
+      <section class='content-detail-container'>
 			</section>
     `;
 	},
@@ -15,7 +14,7 @@ const Detail = {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
 		const restaurant = await RestaurantServices.getDetailRestaurant(url.id);
 		console.log('RESTAURATNS => ', restaurant);
-		const restaurantDetailContainer = document.querySelector('.content-post');
+		const restaurantDetailContainer = document.querySelector('.content-detail-container');
 		restaurantDetailContainer.innerHTML += restoDetailItemTemplate(restaurant);
 		// restaurants.forEach((item) => {
 		// 	restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
