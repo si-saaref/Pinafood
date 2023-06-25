@@ -24,7 +24,10 @@ const Detail = {
 			likeButtonContainer: document.querySelector('#likeButtonContainer'),
 			restaurant: {
 				id: restaurant.id,
-				title: restaurant.name,
+				pictureId: restaurant.pictureId,
+				name: restaurant.name,
+				city: restaurant.city,
+				description: restaurant.description,
 			},
 		});
 

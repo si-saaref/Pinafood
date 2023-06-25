@@ -1,4 +1,5 @@
 import RestaurantServices from '../../data/data-source';
+import FavoriteRestaurantIdb from '../../data/favorite-resto-idb';
 import { cardRestoItemTemplate } from '../templates/template-creator';
 
 const Favorites = {
@@ -14,12 +15,12 @@ const Favorites = {
 	},
 
 	async afterRender() {
-		// const restaurants = await RestaurantServices.getRestaurantList();
-		// const restaurantListContainer = document.querySelector('.content-post');
-		// restaurantListContainer.innerHTML = '';
-		// restaurants.forEach((item) => {
-		// 	restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
-		// });
+		const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+		const restaurantListContainer = document.querySelector('.content-post');
+		restaurantListContainer.innerHTML = '';
+		restaurants.forEach((item) => {
+			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
+		});
 
 		const heroImage = document.querySelector('.hero');
 		heroImage.style.display = 'none';
