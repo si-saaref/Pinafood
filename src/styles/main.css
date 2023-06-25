@@ -150,6 +150,10 @@ img {
 	outline-offset: 200px;
 }
 
+.content-container {
+	padding: 20px;
+}
+
 /*
  * content-header
  */
