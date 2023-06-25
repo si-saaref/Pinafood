@@ -92,13 +92,13 @@ const generateListItemWithHighlight = (listData) => {
 };
 
 export const createLikeButtonTemplate = () => `
-  <button aria-label="like this restaurant" id="likeButton" class="like">
-     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  <button aria-label="like this resto" id="likeButton" class="like">
+     <i class="fa fa-heart-o" aria-hidden="true">Like</i>
   </button>
 `;
 
 export const createLikedButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
-    <i class="fa fa-heart" aria-hidden="true"></i>
+    <i class="fa fa-heart" aria-hidden="true">Unlike</i>
   </button>
 `;

@@ -306,10 +306,6 @@ img {
 	gap: 10px;
 	flex-wrap: wrap;
 }
-
-/* 
- * Like Button
- */
 /*
   Like
 */
@@ -322,8 +318,8 @@ img {
 	background-color: #db0000;
 
 	position: fixed;
-	bottom: 16px;
-	right: 16px;
+	bottom: 56px;
+	right: 56px;
 	border-radius: 50%;
 	border: 0;
 
