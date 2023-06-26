@@ -1,4 +1,6 @@
 import RestaurantServices from '../../data/data-source';
+import UrlParser from '../../routes/url-parser';
+import LayoutHelper from '../../utils/layout-helper';
 import { cardRestoItemTemplate } from '../templates/template-creator';
 
 const Home = {
@@ -14,6 +16,7 @@ const Home = {
 	},
 
 	async afterRender() {
+		const url = UrlParser.parseActiveUrlWithCombiner();
 		const restaurants = await RestaurantServices.getRestaurantList();
 		const restaurantListContainer = document.querySelector('.content-post');
 		restaurantListContainer.innerHTML = '';
@@ -21,8 +24,8 @@ const Home = {
 			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
 		});
 
-		const heroImage = document.querySelector('.hero');
-		heroImage.style.display = 'block';
+		LayoutHelper.showHeroImage();
+		LayoutHelper.handleColorHeader();
 	},
 };
 

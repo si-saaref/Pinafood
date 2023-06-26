@@ -1,5 +1,6 @@
 import RestaurantServices from '../../data/data-source';
 import UrlParser from '../../routes/url-parser';
+import LayoutHelper from '../../utils/layout-helper';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import { createLikeButtonTemplate, restoDetailItemTemplate } from '../templates/template-creator';
 
@@ -31,8 +32,7 @@ const Detail = {
 			},
 		});
 
-		const heroImage = document.querySelector('.hero');
-		heroImage.style.display = 'none';
+		LayoutHelper.hideHeroImage();
 	},
 };
 

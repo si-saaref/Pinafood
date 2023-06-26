@@ -1,7 +1,7 @@
 import routes from '../routes/routes';
 import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
-import HeaderInitiator from '../utils/header-initiator';
+import LayoutHelper from '../utils/layout-helper';
 
 class App {
 	constructor({ button, drawer, mainContent, heroImage, header, appLogo, navList, footer }) {
@@ -24,7 +24,7 @@ class App {
 			header: this.__header,
 		});
 
-		HeaderInitiator.init({
+		LayoutHelper.init({
 			header: this.__header,
 			appLogo: this.__appLogo,
 			drawer: this.__drawer,
@@ -39,6 +39,11 @@ class App {
 		const page = routes[url];
 		this.__mainContent.innerHTML = await page.render();
 		await page.afterRender();
+
+		if (!['/', '/home'].includes(url)) {
+			console.log('NOT HOME');
+			LayoutHelper.showBlackHeader();
+		}
 	}
 }
 

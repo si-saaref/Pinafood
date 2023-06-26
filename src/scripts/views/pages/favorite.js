@@ -1,5 +1,6 @@
 import RestaurantServices from '../../data/data-source';
 import FavoriteRestaurantIdb from '../../data/favorite-resto-idb';
+import LayoutHelper from '../../utils/layout-helper';
 import { cardRestoItemTemplate } from '../templates/template-creator';
 
 const Favorites = {
@@ -22,8 +23,7 @@ const Favorites = {
 			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
 		});
 
-		const heroImage = document.querySelector('.hero');
-		heroImage.style.display = 'none';
+		LayoutHelper.hideHeroImage();
 	},
 };
 
