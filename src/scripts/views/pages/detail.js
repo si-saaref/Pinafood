@@ -19,8 +19,6 @@ const Detail = {
 		const restaurantDetailContainer = document.querySelector('.content-detail-container');
 		restaurantDetailContainer.innerHTML += restoDetailItemTemplate(restaurant);
 
-		// const likeButtonContainer = document.querySelector('#likeButtonContainer');
-		// likeButtonContainer.innerHTML = createLikeButtonTemplate();
 		LikeButtonInitiator.init({
 			likeButtonContainer: document.querySelector('#likeButtonContainer'),
 			restaurant: {

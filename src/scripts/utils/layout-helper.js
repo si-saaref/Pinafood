@@ -15,12 +15,13 @@ const LayoutHelper = {
 		this.footer = footer;
 	},
 
-	handleColorHeader() {
+	handleColorHeader(url) {
 		document.addEventListener('scroll', () => {
-			if (window.scrollY < 50) {
+			if (window.scrollY < 50 && url === '/') {
+				console.log('OARSE');
 				this.showWhiteHeader();
 			} else {
-				this.showBlackHeader();
+				this.showBlackHeader(url);
 			}
 		});
 	},
@@ -35,14 +36,14 @@ const LayoutHelper = {
 		this.footer.style.position = 'relative';
 	},
 
-	showBlackHeader() {
+	showBlackHeader(url) {
 		this.header.style.backgroundColor = 'white';
 		this.appLogo.style.color = 'black';
 		this.drawer.style.color = 'black';
 		this.navList.forEach((elem) => (elem.style.color = 'black'));
 		this.header.style.boxShadow = '0 2px 10px 5px rgba(0, 0, 0, 0.2)';
-		this.header.style.position = 'fixed';
-		this.footer.style.position = 'relative';
+		this.header.style.position = url === '/' ? 'fixed' : 'sticky';
+		this.footer.style.position = url === '/' ? 'relative' : 'fixed';
 	},
 
 	showHeroImage() {

@@ -40,10 +40,7 @@ class App {
 		this.__mainContent.innerHTML = await page.render();
 		await page.afterRender();
 
-		if (!['/', '/home'].includes(url)) {
-			console.log('NOT HOME');
-			LayoutHelper.showBlackHeader();
-		}
+		LayoutHelper.handleColorHeader(url);
 	}
 }
 

@@ -16,7 +16,6 @@ const Home = {
 	},
 
 	async afterRender() {
-		const url = UrlParser.parseActiveUrlWithCombiner();
 		const restaurants = await RestaurantServices.getRestaurantList();
 		const restaurantListContainer = document.querySelector('.content-post');
 		restaurantListContainer.innerHTML = '';
@@ -25,7 +24,6 @@ const Home = {
 		});
 
 		LayoutHelper.showHeroImage();
-		LayoutHelper.handleColorHeader();
 	},
 };
 
