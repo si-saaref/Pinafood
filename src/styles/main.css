@@ -4,6 +4,7 @@
 
 body {
 	overflow-x: hidden;
+  min-height: 100vh;
 }
 
 img {
@@ -29,7 +30,13 @@ img {
  * Header
  */
 
-.header {
+body:has(.show-hero) .header{
+  background: transparent;
+  position: fixed;
+  box-shadow: none;
+}
+
+.header{
 	display: flex;
 	align-items: center;
 	/* box-shadow: 0px 0 25px 10px rgb(163, 162, 162); */
@@ -39,6 +46,16 @@ img {
 	top: 0;
 	/* background: white; */
 	z-index: 9;
+  /* ! Black Session */
+  background: white;
+  box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+}
+
+body:has(.reveal-content) .header {
+  background: white;
+  box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
 }
 
 .header__inner {
@@ -46,11 +63,18 @@ img {
 	flex: 1;
 }
 
-.header__title {
+body:has(.show-hero) .header__title {
+  color: white;
+}
+
+.header__title,
+body:has(.reveal-content) .header__title  {
 	font-weight: 500;
 	font-size: 2em;
 	display: inline-block;
-	color: #212121;
+	/* color: #212121; */
+  /* ! Black Session */
+  color: black;
 }
 
 .header__menu {
@@ -71,6 +95,10 @@ img {
 	background-color: white;
 }
 
+#drawer {
+  color: black;
+}
+
 .nav__list {
 	display: flex;
 	flex-direction: column;
@@ -87,12 +115,23 @@ img {
 	color: black !important;
 }
 
+body:has(.show-hero) .nav__list a {
+  color: white;
+}
+
 .nav__list a {
-	color: #7d7c7c;
+	/* color: #7d7c7c; */
 	transition: 0.2s;
 	padding: 40px;
 	font-weight: 400;
+  /* ! Black Session */
+  color: black;
 }
+
+body:has(.reveal-content) .nav__list a {
+  color: black;
+}
+
 
 .nav__list a:hover {
 	filter: invert(50%);
@@ -110,10 +149,10 @@ img {
 	font-size: 1.5rem;
 }
 
-.header h1,
+/* .header h1,
 .header a {
 	color: white;
-}
+} */
 
 /* 
  * HERO
@@ -123,6 +162,10 @@ img {
 	width: 100%;
 	margin-bottom: 5%;
 	display: none;
+}
+
+.hero.show-hero {
+  display: block;
 }
 
 .hero img {
@@ -255,7 +298,8 @@ img {
  * detail
  */
 .content-detail-container {
-	padding: 30px;
+	padding: 50px 30px;
+  margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
 	height: 100vh;
@@ -359,21 +403,36 @@ img {
 	cursor: pointer;
 }
 
+/* 
+ * Not Home
+ */
+.section-detail,
+.section-favorite {
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+
 /*
  * footer
  */
 
-footer {
+.footer {
 	background-color: #696969;
 	width: 100%;
 	text-align: center;
 	padding: 1rem;
 	box-sizing: border-box;
-	position: fixed;
+	/* position: relative; */
 	bottom: 0;
+  /* ! Black Session */
+  position: fixed;
 }
 
-footer p {
+.show-hero ~ .footer {
+  position: relative;
+}
+
+.footer p {
 	color: white;
 }
 

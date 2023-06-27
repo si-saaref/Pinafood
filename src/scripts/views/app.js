@@ -31,6 +31,7 @@ class App {
 			navList: this.__navList,
 			heroImage: this.__heroImage,
 			footer: this.__footer,
+      mainContent: this.__mainContent
 		});
 	}
 
@@ -38,9 +39,12 @@ class App {
 		const url = UrlParser.parseActiveUrlWithCombiner();
 		const page = routes[url];
 		this.__mainContent.innerHTML = await page.render();
-		await page.afterRender();
 
-		LayoutHelper.handleColorHeader(url);
+		await page.afterRender();
+    
+    if (['/', '/home'].includes(url)) {
+      LayoutHelper.handleColorHeader();
+    }
 	}
 }
 

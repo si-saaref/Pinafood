@@ -6,7 +6,7 @@ import { cardRestoItemTemplate } from '../templates/template-creator';
 const Favorites = {
 	async render() {
 		return `
-      <section class='content-container'>
+      <section class='content-container section-favorite'>
 				<div class="content-header">
 					<header class="content-header__label">Favorites Resto</header>
 				</div>
