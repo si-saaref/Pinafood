@@ -16,10 +16,16 @@ const Home = {
 	},
 
 	async afterRender() {
-		const restaurants = await RestaurantServices.getRestaurantList();
+		const { data, status } = await RestaurantServices.getRestaurantList();
 		const restaurantListContainer = document.querySelector('.content-post');
+
+		if (status === 400) {
+			restaurantDetailContainer.innerHTML += notFoundContent();
+			return;
+		}
+
 		restaurantListContainer.innerHTML = '';
-		restaurants.forEach((item) => {
+		data.forEach((item) => {
 			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
 		});
 
