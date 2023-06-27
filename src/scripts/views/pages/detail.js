@@ -2,7 +2,7 @@ import RestaurantServices from '../../data/data-source';
 import UrlParser from '../../routes/url-parser';
 import LayoutHelper from '../../utils/layout-helper';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
-import { restoDetailItemTemplate } from '../templates/template-creator';
+import { notFoundContent, restoDetailItemTemplate } from '../templates/template-creator';
 
 const Detail = {
 	async render() {
@@ -16,12 +16,14 @@ const Detail = {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
 		const { data, status } = await RestaurantServices.getDetailRestaurant(url.id);
 
+		const restaurantDetailContainer = document.querySelector('.content-detail-container');
+
 		if (status === 400) {
-			console.log('ERRO BOR');
+			restaurantDetailContainer.innerHTML += notFoundContent();
+			LayoutHelper.hideHeroImage();
 			return;
 		}
 
-		const restaurantDetailContainer = document.querySelector('.content-detail-container');
 		restaurantDetailContainer.innerHTML += restoDetailItemTemplate(data);
 
 		LikeButtonInitiator.init({
