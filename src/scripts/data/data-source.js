@@ -2,9 +2,14 @@ import CONFIG from '../globals/config';
 
 const RestaurantServices = (() => {
 	async function getRestaurantList() {
-		const response = await fetch(`${CONFIG.BASE_URL}/list`);
+		let response;
+		try {
+			response = await fetch(`${CONFIG.BASE_URL}/list`);
+		} catch (error) {
+			return { status: 400 };
+		}
 		const responseJSON = await response.json();
-		return responseJSON.restaurants;
+		return { data: responseJSON.restaurants, statts: 200 };
 	}
 
 	async function getDetailRestaurant(id) {
