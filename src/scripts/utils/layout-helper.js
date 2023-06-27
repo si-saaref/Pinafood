@@ -50,6 +50,7 @@ const LayoutHelper = {
 	},
 
 	hideHeroImage() {
+    console.log('HIDE HERO IMAGE')
 		this.heroImage.classList.remove('show-hero')
 	},
 

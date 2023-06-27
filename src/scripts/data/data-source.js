@@ -8,9 +8,15 @@ const RestaurantServices = (() => {
 	}
 
 	async function getDetailRestaurant(id) {
-		const response = await fetch(`${CONFIG.BASE_URL}/detail/${id}`);
+		let response;
+		try {
+			response = await fetch(`${CONFIG.BASE_URL}/detail/${id}`);
+		} catch (error) {
+			return { status: 400 };
+		}
+
 		const responseJSON = await response.json();
-		return responseJSON.restaurant;
+		return { data: responseJSON.restaurant, status: 200 };
 	}
 
 	return {

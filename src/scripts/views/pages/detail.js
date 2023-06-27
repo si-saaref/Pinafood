@@ -14,18 +14,24 @@ const Detail = {
 
 	async afterRender() {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
-		const restaurant = await RestaurantServices.getDetailRestaurant(url.id);
+		const { data, status } = await RestaurantServices.getDetailRestaurant(url.id);
+
+		if (status === 400) {
+			console.log('ERRO BOR');
+			return;
+		}
+
 		const restaurantDetailContainer = document.querySelector('.content-detail-container');
-		restaurantDetailContainer.innerHTML += restoDetailItemTemplate(restaurant);
+		restaurantDetailContainer.innerHTML += restoDetailItemTemplate(data);
 
 		LikeButtonInitiator.init({
 			likeButtonContainer: document.querySelector('#likeButtonContainer'),
 			restaurant: {
-				id: restaurant.id,
-				pictureId: restaurant.pictureId,
-				name: restaurant.name,
-				city: restaurant.city,
-				description: restaurant.description,
+				id: data.id,
+				pictureId: data.pictureId,
+				name: data.name,
+				city: data.city,
+				description: data.description,
 			},
 		});
 
