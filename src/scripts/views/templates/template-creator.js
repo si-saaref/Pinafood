@@ -23,43 +23,45 @@ export const cardRestoItemTemplate = (restaurant) => `
 
 export const restoDetailItemTemplate = (restaurant) => `
   <article class="detail-item" tabindex="0">
-    <h1 class="detail-item__title">
-      ${restaurant.name}
-    </h1>
-    <div class="detail-item__content">
-      <img
-        class="detail-item__thumbnail"
-        src="${CONFIG.BASE_URL}/images/medium/${restaurant.pictureId}"
-        alt="Gambar ${restaurant.name}"
-      />
-      <div class="detail-item__info">
-        <div class="info-item-wrapper">
-          <h1>Rating</h1>
-          <p>${restaurant.rating}</p>
-        </div>
-        <div class="info-item-wrapper">
-          <h1>City</h1>
-          <p class="">${restaurant.city}</p>
-        </div>
-        <div class="info-item-wrapper">
-          <h1>Address</h1>
-          <p class="detail-item__address">${restaurant.address}</p>
-        </div>
-        <div class="info-item-wrapper">
-          <h1>Categories</h1>
-          <div class="highlight-wrapper">
-            ${generateListItemWithHighlight({ listData: restaurant.categories })}
+    <div class="section-wrapper-item">
+      <h1 class="detail-item__title">
+        ${restaurant.name}
+      </h1>
+      <div class="detail-item__content">
+        <img
+          class="detail-item__thumbnail"
+          src="${CONFIG.BASE_URL}/images/medium/${restaurant.pictureId}"
+          alt="Gambar ${restaurant.name}"
+        />
+        <div class="detail-item__info">
+          <div class="info-item-wrapper">
+            <h1>Rating</h1>
+            <p>${restaurant.rating}</p>
+          </div>
+          <div class="info-item-wrapper">
+            <h1>City</h1>
+            <p class="">${restaurant.city}</p>
+          </div>
+          <div class="info-item-wrapper">
+            <h1>Address</h1>
+            <p class="detail-item__address">${restaurant.address}</p>
+          </div>
+          <div class="info-item-wrapper">
+            <h1>Categories</h1>
+            <div class="highlight-wrapper">
+              ${generateListItemWithHighlight({ listData: restaurant.categories })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="">
+      <div class="detail-item__description">
       <h1>Tentang ${restaurant.name}</h1>
-      <p class="post-item__description">
-        ${restaurant.description}
-      </p>
+        <p class="post-item__description">
+          ${restaurant.description}
+        </p>
+      </div>
     </div>
-    <div class="detail-item__menus">
+    <div class="detail-item__menus section-wrapper-item">
       <div class="detail-item__menu__food menu-item-wrapper">
         <h1>Food</h1>
         <div class="highlight-wrapper">
@@ -73,7 +75,7 @@ export const restoDetailItemTemplate = (restaurant) => `
         </div>
       </div>
     </div>
-    <div class="detail-item__reviews review-wrapper">
+    <div class="detail-item__reviews review-wrapper section-wrapper-item">
       <h1>Reviews</h1>
       <div class="highlight-wrapper">
         ${generateListItemWithHighlight({ listData: restaurant.customerReviews, type: 'review' })}

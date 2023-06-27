@@ -10,7 +10,7 @@
 		"test": "karma start",
 		"predeploy": "yarn build",
 		"deploy": "gh-pages -d dist",
-		"serve": "http-server dist",
+		"serve": "http-server dist -p 8012",
 		"build-serve": "yarn build && yarn serve"
 	},
 	"keywords": [],
@@ -45,6 +45,7 @@
 		"workbox-webpack-plugin": "^7.0.0"
 	},
 	"dependencies": {
+		"clean-webpack-plugin": "^4.0.0",
 		"gh-pages": "^5.0.0",
 		"idb": "^7.1.1",
 		"regenerator-runtime": "^0.13.9",

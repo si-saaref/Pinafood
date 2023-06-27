@@ -1,12 +1,15 @@
 const { merge } = require('webpack-merge');
 const path = require('path');
 const common = require('./webpack.common');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
 	mode: 'development',
 	devtool: 'inline-source-map',
 	devServer: {
 		static: path.resolve(__dirname, 'dist'),
+		hot: false,
+		liveReload: false,
 		open: true,
 		port: 9898,
 		client: {
@@ -17,4 +20,5 @@ module.exports = merge(common, {
 		},
 		compress: true,
 	},
+	plugins: [new CleanWebpackPlugin()],
 });
