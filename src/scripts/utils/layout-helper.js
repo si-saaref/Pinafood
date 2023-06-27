@@ -5,7 +5,7 @@ const LayoutHelper = {
 	drawer: null,
 	heroImage: null,
 	footer: null,
-  mainContent: null,
+	mainContent: null,
 
 	init({ header, appLogo, navList, drawer, heroImage, footer, mainContent }) {
 		this.header = header;
@@ -14,17 +14,17 @@ const LayoutHelper = {
 		this.drawer = drawer;
 		this.heroImage = heroImage;
 		this.footer = footer;
-    this.mainContent = mainContent;
+		this.mainContent = mainContent;
 	},
 
 	handleColorHeader() {
-    document.addEventListener('scroll', () => {
-      if (window.scrollY < 50) {
-        this.mainContent.classList.remove('reveal-content');
-      } else {
-        this.mainContent.classList.add('reveal-content');
-      }
-    });
+		document.addEventListener('scroll', () => {
+			if (window.scrollY < 50) {
+				this.mainContent.classList.remove('reveal-content');
+			} else {
+				this.mainContent.classList.add('reveal-content');
+			}
+		});
 	},
 
 	showWhiteHeader() {
@@ -46,19 +46,16 @@ const LayoutHelper = {
 	},
 
 	showHeroImage() {
-		this.heroImage.classList.add('show-hero')
+		this.heroImage.classList.add('show-hero');
 	},
 
 	hideHeroImage() {
-    console.log('HIDE HERO IMAGE')
-		this.heroImage.classList.remove('show-hero')
+		this.heroImage.classList.remove('show-hero');
 	},
 
-  removeRevealContentSelector() {
-    console.log('AYANM', this.mainContent.classList);
-    this.mainContent.classList.remove('reveal-content');
-    console.log('PASSED', this.mainContent.classList)
-  }
+	removeRevealContentSelector() {
+		this.mainContent.classList.remove('reveal-content');
+	},
 };
 
 export default LayoutHelper;

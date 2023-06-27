@@ -1,4 +1,3 @@
-import RestaurantServices from '../../data/data-source';
 import FavoriteRestaurantIdb from '../../data/favorite-resto-idb';
 import LayoutHelper from '../../utils/layout-helper';
 import { cardRestoItemTemplate } from '../templates/template-creator';

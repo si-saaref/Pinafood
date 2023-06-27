@@ -40,12 +40,10 @@ body:has(.show-hero) .header {
 .header {
 	display: flex;
 	align-items: center;
-	/* box-shadow: 0px 0 25px 10px rgb(163, 162, 162); */
 	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
-	/* background: white; */
 	z-index: 9;
 	/* ! Black Session */
 	background: white;
@@ -73,7 +71,6 @@ body:has(.reveal-content) .header__title {
 	font-weight: 500;
 	font-size: 2em;
 	display: inline-block;
-	/* color: #212121; */
 	/* ! Black Session */
 	color: black;
 }
@@ -85,7 +82,6 @@ body:has(.reveal-content) .header__title {
 	width: 200px;
 	transition: all 0.3s;
 	padding: 8px;
-	/* background-color: white; */
 	overflow: hidden;
 	z-index: 200;
 	height: 50vh;
@@ -121,7 +117,6 @@ body:has(.show-hero) .nav__list a {
 }
 
 .nav__list a {
-	/* color: #7d7c7c; */
 	transition: 0.2s;
 	padding: 40px;
 	font-weight: 400;
@@ -143,9 +138,6 @@ body:has(.show-hero) .hamburger-wrapper {
 
 .hamburger-wrapper {
 	padding: 22px;
-	/* position: fixed; */
-	/* left: 2%;
-	top: 1%; */
 	background: transparent;
 	color: black;
 	border: none;
@@ -156,11 +148,6 @@ body:has(.show-hero) .hamburger-wrapper {
 body:has(.reveal-content) .hamburger-wrapper {
 	color: black;
 }
-
-/* .header h1,
-.header a {
-	color: white;
-} */
 
 /* 
  * HERO
@@ -371,14 +358,8 @@ body:has(.reveal-content) .hamburger-wrapper {
 	width: 50%;
 }
 
-.detail-item__categories {
-	/* display: flex; */
-	/* gap: 10px; */
-}
-
 .highlighted-item {
 	box-shadow: 0 2px 8px 0 rgba(48, 49, 53, 0.22);
-	/* box-shadow: 0px 2px 6px 2px rgb(227, 227, 227); */
 	padding: 4px 10px;
 	border-radius: 5px;
 	background-color: rgb(250, 250, 250);
@@ -408,9 +389,10 @@ body:has(.reveal-content) .hamburger-wrapper {
 	gap: 10px;
 	flex-wrap: wrap;
 }
+
 /*
-  Like
-*/
+ *Like
+ */
 .like {
 	width: 55px;
 	height: 55px;
@@ -449,7 +431,6 @@ body:has(.reveal-content) .hamburger-wrapper {
 	text-align: center;
 	padding: 1rem;
 	box-sizing: border-box;
-	/* position: relative; */
 	bottom: 0;
 	/* ! Black Session */
 	position: fixed;
@@ -488,7 +469,6 @@ body:has(.reveal-content) .hamburger-wrapper {
 		transform: translateX(0%);
 		height: fit-content;
 		width: auto;
-		/* top: 5%; */
 	}
 
 	.nav__list {
@@ -528,10 +508,6 @@ body:has(.reveal-content) .hamburger-wrapper {
 }
 
 @media screen and (min-width: 992px) {
-	/* .headline {
-		grid-template-columns: repeat(2, 1fr);
-	} */
-
 	.content-post {
 		margin: 32px auto auto;
 		text-align: left;

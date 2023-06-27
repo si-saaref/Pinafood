@@ -1,5 +1,4 @@
 import RestaurantServices from '../../data/data-source';
-import UrlParser from '../../routes/url-parser';
 import LayoutHelper from '../../utils/layout-helper';
 import { cardRestoItemTemplate } from '../templates/template-creator';
 
