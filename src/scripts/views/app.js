@@ -4,7 +4,17 @@ import DrawerInitiator from '../utils/drawer-initiator';
 import LayoutHelper from '../utils/layout-helper';
 
 class App {
-	constructor({ button, drawer, mainContent, heroImage, header, appLogo, navList, footer }) {
+	constructor({
+		button,
+		drawer,
+		mainContent,
+		heroImage,
+		header,
+		appLogo,
+		navList,
+		footer,
+		skipButton,
+	}) {
 		this.__button = button;
 		this.__drawer = drawer;
 		this.__mainContent = mainContent;
@@ -13,6 +23,7 @@ class App {
 		this.__appLogo = appLogo;
 		this.__navList = navList;
 		this.__footer = footer;
+		this.__skipButton = skipButton;
 	}
 
 	initialAppShell() {
@@ -31,7 +42,8 @@ class App {
 			navList: this.__navList,
 			heroImage: this.__heroImage,
 			footer: this.__footer,
-			mainContent: this.__mainContent
+			mainContent: this.__mainContent,
+			skipButton: this.__skipButton,
 		});
 	}
 
@@ -41,7 +53,9 @@ class App {
 		this.__mainContent.innerHTML = await page.render();
 
 		await page.afterRender();
-    
+
+		LayoutHelper.handleClickSkipButton();
+
 		if (['/', '/home'].includes(url)) {
 			LayoutHelper.handleColorHeader();
 		}

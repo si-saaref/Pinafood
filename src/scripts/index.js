@@ -13,6 +13,7 @@ const app = new App({
 	appLogo: document.querySelector('.header__title'),
 	navList: document.querySelectorAll('.header a'),
 	footer: document.querySelector('.footer'),
+	skipButton: document.querySelector('.skip-link'),
 });
 
 app.initialAppShell();

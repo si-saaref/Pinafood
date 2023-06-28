@@ -6,8 +6,9 @@ const LayoutHelper = {
 	heroImage: null,
 	footer: null,
 	mainContent: null,
+	skipButton: null,
 
-	init({ header, appLogo, navList, drawer, heroImage, footer, mainContent }) {
+	init({ header, appLogo, navList, drawer, heroImage, footer, mainContent, skipButton }) {
 		this.header = header;
 		this.appLogo = appLogo;
 		this.navList = navList;
@@ -15,6 +16,7 @@ const LayoutHelper = {
 		this.heroImage = heroImage;
 		this.footer = footer;
 		this.mainContent = mainContent;
+		this.skipButton = skipButton;
 	},
 
 	handleColorHeader() {
@@ -61,6 +63,13 @@ const LayoutHelper = {
 
 	removeRevealContentSelector() {
 		this.mainContent.classList.remove('reveal-content');
+	},
+
+	handleClickSkipButton() {
+		this.skipButton.addEventListener('click', (event) => {
+			event.preventDefault();
+			document.querySelector(`#main-content`).focus();
+		});
 	},
 };
 
