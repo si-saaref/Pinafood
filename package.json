@@ -10,6 +10,7 @@
 		"test": "karma start",
 		"predeploy": "yarn build",
 		"deploy": "gh-pages -d dist",
+		"lint": "eslint --fix --ext .js .",
 		"serve": "http-server dist -p 8012",
 		"build-serve": "yarn build && yarn serve"
 	},

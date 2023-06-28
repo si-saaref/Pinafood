@@ -31,7 +31,7 @@ class App {
 			navList: this.__navList,
 			heroImage: this.__heroImage,
 			footer: this.__footer,
-      mainContent: this.__mainContent
+			mainContent: this.__mainContent
 		});
 	}
 
@@ -42,9 +42,9 @@ class App {
 
 		await page.afterRender();
     
-    if (['/', '/home'].includes(url)) {
-      LayoutHelper.handleColorHeader();
-    }
+		if (['/', '/home'].includes(url)) {
+			LayoutHelper.handleColorHeader();
+		}
 	}
 }
 

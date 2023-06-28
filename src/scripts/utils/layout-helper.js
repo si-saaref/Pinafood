@@ -33,7 +33,10 @@ const LayoutHelper = {
 		this.header.style.position = 'fixed';
 		this.appLogo.style.color = 'white';
 		this.drawer.style.color = 'white';
-		this.navList.forEach((elem) => (elem.style.color = 'white'));
+		this.navList.forEach((elem) => {
+			const navItem = elem;
+			navItem.style.color = 'white';
+		});
 	},
 
 	showBlackHeader(url) {
@@ -42,7 +45,10 @@ const LayoutHelper = {
 		this.header.style.position = url === '/' ? 'fixed' : 'sticky';
 		this.appLogo.style.color = 'black';
 		this.drawer.style.color = 'black';
-		this.navList.forEach((elem) => (elem.style.color = 'black'));
+		this.navList.forEach((elem) => {
+			const navItem = elem;
+			navItem.style.color = 'black';
+		});
 	},
 
 	showHeroImage() {

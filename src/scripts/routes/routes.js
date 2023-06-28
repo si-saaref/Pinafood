@@ -1,4 +1,4 @@
-import Home from '../views/pages/Home';
+import Home from '../views/pages/home';
 import Detail from '../views/pages/detail';
 import Favorites from '../views/pages/favorite';
 

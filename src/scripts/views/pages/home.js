@@ -1,6 +1,6 @@
 import RestaurantServices from '../../data/data-source';
 import LayoutHelper from '../../utils/layout-helper';
-import { cardRestoItemTemplate } from '../templates/template-creator';
+import { cardRestoItemTemplate, notFoundContent } from '../templates/template-creator';
 
 const Home = {
 	async render() {
@@ -19,7 +19,7 @@ const Home = {
 		const restaurantListContainer = document.querySelector('.content-post');
 
 		if (status === 400) {
-			restaurantDetailContainer.innerHTML += notFoundContent();
+			restaurantListContainer.innerHTML += notFoundContent();
 			return;
 		}
 

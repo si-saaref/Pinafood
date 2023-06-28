@@ -29,7 +29,7 @@ const DrawerInitiator = {
 		drawer.classList.remove('active');
 	},
 
-	__handleAutoCloseDrawer() {
+	__handleAutoCloseDrawer(drawer) {
 		const mediaQuery = window.matchMedia('(min-width: 768px)');
 		function handleCloseDrawerOnDesktop(e) {
 			if (e.matches) {
