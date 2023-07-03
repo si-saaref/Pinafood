@@ -124,7 +124,7 @@ export const createLikeButtonTemplate = () => `
 `;
 
 export const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this restaurant" id="likeButton" class="like">
+  <button aria-label="unlike this resto" id="likeButton" class="like">
     ${generateHeartFullIcon()}
   </button>
 `;
