@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 const assert = require('assert');
 
-Feature('Liking Movies');
+Feature('Favorite Restaurant');
 
 Before(({ I }) => {
 	I.amOnPage('/');
@@ -52,5 +52,4 @@ Scenario('Unliking a Restaurant', async ({ I }) => {
 		I.click('#likeButton');
 		I.amOnPage('/#/favorites');
 	}
-	pause();
 });
