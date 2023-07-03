@@ -5,6 +5,12 @@ Before(({ I }) => {
 	I.amOnPage('/');
 });
 
+Scenario('Check color header while scroll down', async ({ I }) => {
+	I.scrollPageToBottom();
+	const headerClass = await I.grabAttributeFrom('.header', 'class');
+	headerClass.includes('header-white');
+});
+
 Scenario('Check Home Nav Item show homepage', async ({ I }) => {
 	I.click(locate('.nav__item').withChild('a').withText('Home'));
 	I.seeElement(locate('.content-header__label').withText('Explore Restaurant'));
