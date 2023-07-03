@@ -1,7 +1,8 @@
 import RestaurantServices from '../../data/data-source';
+import FavoriteRestaurantIdb from '../../data/favorite-resto-idb';
 import UrlParser from '../../routes/url-parser';
 import LayoutHelper from '../../utils/layout-helper';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import { notFoundContent, restoDetailItemTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -26,7 +27,7 @@ const Detail = {
 
 		restaurantDetailContainer.innerHTML += restoDetailItemTemplate(data);
 
-		LikeButtonInitiator.init({
+		LikeButtonPresenter.init({
 			likeButtonContainer: document.querySelector('#likeButtonContainer'),
 			restaurant: {
 				id: data.id,
@@ -35,6 +36,7 @@ const Detail = {
 				city: data.city,
 				description: data.description,
 			},
+			favoriteRestaurants: FavoriteRestaurantIdb,
 		});
 
 		LayoutHelper.hideHeroImage();
