@@ -33,4 +33,14 @@ describe('Unlike a Restaurant', () => {
 
 		expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
 	});
+
+	it('should not throw error if the unliked movie is not in the list', async () => {
+		await createLikeButtonPresenterWithRestaurant({ id: 1 });
+
+		await FavoriteRestaurantIdb.deleteRestaurant(1);
+
+		document.querySelector('#likeButton').dispatchEvent(new Event('click'));
+
+		expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+	});
 });
