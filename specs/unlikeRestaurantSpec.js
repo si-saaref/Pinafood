@@ -19,4 +19,18 @@ describe('Unlike a Restaurant', () => {
 
 		expect(document.querySelector('[aria-label="unlike this resto"]')).toBeTruthy();
 	});
+
+	it('should not show the like button when the restaurant has not been liked before', async () => {
+		await createLikeButtonPresenterWithRestaurant({ id: 1 });
+
+		expect(document.querySelector('[aria-label="like this resto"]')).toBeFalsy();
+	});
+
+	it('should be able to unlike the restaurant', async () => {
+		await createLikeButtonPresenterWithRestaurant({ id: 1 });
+
+		document.querySelector('#likeButton').dispatchEvent(new Event('click'));
+
+		expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+	});
 });
