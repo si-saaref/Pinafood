@@ -23,6 +23,7 @@ const Favorites = {
 		});
 
 		LayoutHelper.hideHeroImage();
+		window.scrollTo(0, 0);
 	},
 };
 

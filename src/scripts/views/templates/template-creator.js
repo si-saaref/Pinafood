@@ -62,7 +62,7 @@ export const restoDetailItemTemplate = (restaurant) => `
       <h1 class="detail-item__title">
         ${restaurant.name}
       </h1>
-      <div class="detail-item__content">
+      <div class="detail-item__content"> 
         <img
           class="detail-item__thumbnail lazyload"
           data-src="${CONFIG.BASE_URL}/images/medium/${restaurant.pictureId}"
@@ -70,7 +70,7 @@ export const restoDetailItemTemplate = (restaurant) => `
         />
         <div class="detail-item__info">
           <div class="info-item-wrapper">
-            <h1>Rating</h1>
+            <h1>Rating</h1> 
             <p>${restaurant.rating}</p>
           </div>
           <div class="info-item-wrapper">
