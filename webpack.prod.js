@@ -8,6 +8,12 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
 	mode: 'production',
 	devtool: 'source-map',
+	// https://stackoverflow.com/a/53517149
+	performance: {
+		hints: false,
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000,
+	},
 	module: {
 		rules: [
 			{
