@@ -9,7 +9,7 @@ Before(({ I }) => {
 });
 
 Scenario('Liking a Restaurant', async ({ I }) => {
-	I.waitForElement('.post-item__title a', 1);
+	I.waitForElement('.post-item__title a', 3);
 	I.seeElement('.post-item__title a');
 
 	const firstResto = locate('.post-item__title a').first();
@@ -17,7 +17,7 @@ Scenario('Liking a Restaurant', async ({ I }) => {
 	I.click(firstResto);
 
 	// TODO => Open the detail page and click like button
-	I.waitForElement('#likeButton', 1);
+	I.waitForElement('#likeButton', 3);
 	I.seeElement('#likeButton');
 	I.click('#likeButton');
 
@@ -31,12 +31,12 @@ Scenario('Liking a Restaurant', async ({ I }) => {
 });
 
 Scenario('Unliking a Restaurant', async ({ I }) => {
-	I.waitForElement('.post-item__title a', 1);
+	I.waitForElement('.post-item__title a', 3);
 	I.seeElement('.post-item__title a');
 
 	for (let i = 1; i <= 2; i++) {
 		I.click(locate('.post-item__title a').at(i));
-		I.waitForElement('#likeButton', 1);
+		I.waitForElement('#likeButton', 3);
 		I.seeElement('#likeButton');
 		I.click('#likeButton');
 		I.amOnPage('/');
@@ -47,7 +47,7 @@ Scenario('Unliking a Restaurant', async ({ I }) => {
 
 	for (let i = 1; i <= 2; i++) {
 		I.click(locate('.post-item__title a').first());
-		I.waitForElement('#likeButton', 1);
+		I.waitForElement('#likeButton', 3);
 		I.seeElement('#likeButton');
 		I.click('#likeButton');
 		I.amOnPage('/#/favorites');

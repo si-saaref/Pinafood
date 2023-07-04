@@ -39,10 +39,13 @@
 
 		<div class="hero show-hero">
 			<div class="hero__inner">
-				<img src="./images/heros/hero-image_2.jpg" alt="" />
 				<picture>
-					<source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg" />
-					<img src="./images/heros/hero-image_2-large.jpg" alt="Restarurant Banner" />
+					<source media="(max-width: 600px)" srcset="./images/hero-image-small.jpg" />
+					<img
+						src="./images/hero-image-large.jpg"
+						alt="Restarurant Banner"
+						onerror="this.onerror=null; this.src=`./images/hero-image.jpg`"
+					/>
 				</picture>
 			</div>
 		</div>
