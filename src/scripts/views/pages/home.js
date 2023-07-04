@@ -14,7 +14,7 @@ const Home = {
 					<header class="content-header__label">Explore Restaurant</header>
 				</div>
 				<div class="content-post">
-          ${cardRestoItemSkeleton(10)}
+          ${cardRestoItemSkeleton(9)}
         </div>
 			</section>
     `;
@@ -24,12 +24,15 @@ const Home = {
 		const { data, status } = await RestaurantServices.getRestaurantList();
 		const restaurantListContainer = document.querySelector('.content-post');
 
+		restaurantListContainer.innerHTML = '';
 		if (status === 400) {
+			LayoutHelper.hideHeroImage();
+			document.querySelector('.content-post').style.display = 'flex';
+			document.querySelector('.content-post').style.justifyContent = 'center';
 			restaurantListContainer.innerHTML += notFoundContent();
 			return;
 		}
 
-		restaurantListContainer.innerHTML = '';
 		data.forEach((item) => {
 			restaurantListContainer.innerHTML += cardRestoItemTemplate(item);
 		});
