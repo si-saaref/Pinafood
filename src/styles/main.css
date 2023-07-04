@@ -491,10 +491,10 @@ body:has(.reveal-content) .hamburger-wrapper {
 
 @keyframes skeleton-loading {
 	0% {
-		background-color: hsl(201, 20%, 70%);
+		background: hsl(201, 20%, 70%);
 	}
 	100% {
-		background-color: hsl(204, 20%, 85%);
+		background: hsl(204, 20%, 85%);
 	}
 }
 
