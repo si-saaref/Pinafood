@@ -1,8 +1,8 @@
 {
-  "hash": "517f84b42829c58d237a",
+  "hash": "a38d9571ee367c03e730",
   "version": "5.81.0",
-  "time": 5934,
-  "builtAt": 1688471978908,
+  "time": 5774,
+  "builtAt": 1688478963830,
   "publicPath": "auto",
   "outputPath": "/home/runner/work/Pinafood/Pinafood/dist",
   "assetsByChunkName": {
@@ -332,7 +332,7 @@
     {
       "type": "asset",
       "name": "app~f6563343.bundle.js",
-      "size": 35265,
+      "size": 35540,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
@@ -341,7 +341,7 @@
         "related": {
           "sourceMap": "app~f6563343.bundle.js.map"
         },
-        "size": 35265
+        "size": 35540
       },
       "chunkNames": [
         "app~f6563343"
@@ -354,13 +354,13 @@
         {
           "type": "sourceMap",
           "name": "app~f6563343.bundle.js.map",
-          "size": 33329,
+          "size": 33736,
           "emitted": true,
           "comparedForEmit": false,
           "cached": false,
           "info": {
             "development": true,
-            "size": 33329
+            "size": 33736
           },
           "chunkNames": [],
           "chunkIdHints": [],
@@ -385,7 +385,7 @@
     {
       "type": "asset",
       "name": "app~04e4ec69.bundle.js",
-      "size": 34201,
+      "size": 34145,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
@@ -394,7 +394,7 @@
         "related": {
           "sourceMap": "app~04e4ec69.bundle.js.map"
         },
-        "size": 34201
+        "size": 34145
       },
       "chunkNames": [
         "app~04e4ec69"
@@ -407,13 +407,13 @@
         {
           "type": "sourceMap",
           "name": "app~04e4ec69.bundle.js.map",
-          "size": 40159,
+          "size": 40065,
           "emitted": true,
           "comparedForEmit": false,
           "cached": false,
           "info": {
             "development": true,
-            "size": 40159
+            "size": 40065
           },
           "chunkNames": [],
           "chunkIdHints": [],
@@ -1710,9 +1710,9 @@
       "initial": true,
       "entry": true,
       "recorded": false,
-      "size": 26978,
+      "size": 26922,
       "sizes": {
-        "javascript": 23826,
+        "javascript": 23770,
         "runtime": 3152
       },
       "names": [
@@ -1728,7 +1728,7 @@
       "auxiliaryFiles": [
         "app~04e4ec69.bundle.js.map"
       ],
-      "hash": "f6cf92296a7d36094b30",
+      "hash": "1fbdeb607179df00eece",
       "childrenByOrder": {},
       "id": 209,
       "siblings": [
@@ -1746,9 +1746,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 22664,
+          "size": 22608,
           "sizes": {
-            "javascript": 22664
+            "javascript": 22608
           },
           "built": true,
           "codeGenerated": true,
@@ -3051,7 +3051,21 @@
               "active": true,
               "explanation": "",
               "userRequest": "../../utils/layout-helper",
-              "loc": "46:12-38",
+              "loc": "40:12-38",
+              "moduleId": 750,
+              "resolvedModuleId": 750
+            },
+            {
+              "moduleIdentifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/home.js",
+              "module": "./src/scripts/views/pages/home.js",
+              "moduleName": "./src/scripts/views/pages/home.js",
+              "resolvedModuleIdentifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/home.js",
+              "resolvedModule": "./src/scripts/views/pages/home.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "../../utils/layout-helper",
+              "loc": "49:12-38",
               "moduleId": 750,
               "resolvedModuleId": 750
             }
@@ -3444,8 +3458,8 @@
           "optional": false,
           "orphan": false,
           "dependent": false,
-          "issuer": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-          "issuerName": "./src/scripts/views/pages/detail.js",
+          "issuer": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+          "issuerName": "./src/scripts/views/pages/favorite.js",
           "issuerPath": [
             {
               "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/index.js",
@@ -3463,16 +3477,16 @@
               "id": 705
             },
             {
-              "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-              "name": "./src/scripts/views/pages/detail.js",
-              "id": 178
+              "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+              "name": "./src/scripts/views/pages/favorite.js",
+              "id": 80
             }
           ],
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "id": 157,
-          "issuerId": 178,
+          "issuerId": 80,
           "chunks": [
             495
           ],
@@ -3841,9 +3855,9 @@
       "initial": true,
       "entry": false,
       "recorded": false,
-      "size": 29219,
+      "size": 29423,
       "sizes": {
-        "javascript": 29219
+        "javascript": 29423
       },
       "names": [
         "app~f6563343"
@@ -3858,7 +3872,7 @@
       "auxiliaryFiles": [
         "app~f6563343.bundle.js.map"
       ],
-      "hash": "7ab376bb24a13544d098",
+      "hash": "3b22366abd1944541bdb",
       "childrenByOrder": {},
       "id": 535,
       "siblings": [
@@ -4034,9 +4048,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 15381,
+          "size": 15585,
           "sizes": {
-            "javascript": 15381
+            "javascript": 15585
           },
           "built": true,
           "codeGenerated": true,
@@ -4132,7 +4146,7 @@
             "default"
           ],
           "optimizationBailout": [
-            "Statement (VariableDeclaration) with side effects in source code at 8:0-54:2",
+            "Statement (VariableDeclaration) with side effects in source code at 8:0-57:2",
             "ModuleConcatenation bailout: Cannot concat with ./src/scripts/data/data-source.js: Module ./src/scripts/data/data-source.js is not in the same chunk(s) (expected in chunk(s) app~f6563343, module is in chunk(s) app~a51fa3f5)",
             "ModuleConcatenation bailout: Cannot concat with ./src/scripts/utils/layout-helper.js: Module ./src/scripts/utils/layout-helper.js is not in the same chunk(s) (expected in chunk(s) app~f6563343, module is in chunk(s) app~e4317507)",
             "ModuleConcatenation bailout: Cannot concat with ./src/scripts/views/templates/template-creator.js: Module ./src/scripts/views/templates/template-creator.js is referenced from different chunks by these modules: ./src/scripts/utils/like-button-presenter.js, ./src/scripts/views/pages/detail.js, ./src/scripts/views/pages/favorite.js"
@@ -4346,7 +4360,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "../templates/template-creator",
-              "loc": "39:49-64",
+              "loc": "43:49-64",
               "moduleId": 750,
               "resolvedModuleId": 750
             },
@@ -4360,7 +4374,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "../templates/template-creator",
-              "loc": "44:51-72",
+              "loc": "47:51-72",
               "moduleId": 750,
               "resolvedModuleId": 750
             }
@@ -4889,9 +4903,9 @@
                   "id": 705
                 },
                 {
-                  "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-                  "name": "./src/scripts/views/pages/detail.js",
-                  "id": 178
+                  "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+                  "name": "./src/scripts/views/pages/favorite.js",
+                  "id": 80
                 },
                 {
                   "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/data/favorite-resto-idb.js",
@@ -4963,9 +4977,9 @@
                   "id": 705
                 },
                 {
-                  "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-                  "name": "./src/scripts/views/pages/detail.js",
-                  "id": 178
+                  "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+                  "name": "./src/scripts/views/pages/favorite.js",
+                  "id": 80
                 },
                 {
                   "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/data/favorite-resto-idb.js",
@@ -6755,9 +6769,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 22664,
+      "size": 22608,
       "sizes": {
-        "javascript": 22664
+        "javascript": 22608
       },
       "built": true,
       "codeGenerated": true,
@@ -7193,7 +7207,21 @@
           "active": true,
           "explanation": "",
           "userRequest": "../../utils/layout-helper",
-          "loc": "46:12-38",
+          "loc": "40:12-38",
+          "moduleId": 750,
+          "resolvedModuleId": 750
+        },
+        {
+          "moduleIdentifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/home.js",
+          "module": "./src/scripts/views/pages/home.js",
+          "moduleName": "./src/scripts/views/pages/home.js",
+          "resolvedModuleIdentifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/home.js",
+          "resolvedModule": "./src/scripts/views/pages/home.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "../../utils/layout-helper",
+          "loc": "49:12-38",
           "moduleId": 750,
           "resolvedModuleId": 750
         }
@@ -7763,9 +7791,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 15381,
+      "size": 15585,
       "sizes": {
-        "javascript": 15381
+        "javascript": 15585
       },
       "built": true,
       "codeGenerated": true,
@@ -7860,7 +7888,7 @@
         "default"
       ],
       "optimizationBailout": [
-        "Statement (VariableDeclaration) with side effects in source code at 8:0-54:2",
+        "Statement (VariableDeclaration) with side effects in source code at 8:0-57:2",
         "ModuleConcatenation bailout: Cannot concat with ./src/scripts/data/data-source.js: Module ./src/scripts/data/data-source.js is not in the same chunk(s) (expected in chunk(s) app~f6563343, module is in chunk(s) app~a51fa3f5)",
         "ModuleConcatenation bailout: Cannot concat with ./src/scripts/utils/layout-helper.js: Module ./src/scripts/utils/layout-helper.js is not in the same chunk(s) (expected in chunk(s) app~f6563343, module is in chunk(s) app~e4317507)",
         "ModuleConcatenation bailout: Cannot concat with ./src/scripts/views/templates/template-creator.js: Module ./src/scripts/views/templates/template-creator.js is referenced from different chunks by these modules: ./src/scripts/utils/like-button-presenter.js, ./src/scripts/views/pages/detail.js, ./src/scripts/views/pages/favorite.js"
@@ -8389,7 +8417,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "../templates/template-creator",
-          "loc": "39:49-64",
+          "loc": "43:49-64",
           "moduleId": 750,
           "resolvedModuleId": 750
         },
@@ -8403,7 +8431,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "../templates/template-creator",
-          "loc": "44:51-72",
+          "loc": "47:51-72",
           "moduleId": 750,
           "resolvedModuleId": 750
         }
@@ -8454,8 +8482,8 @@
       "cacheable": true,
       "optional": false,
       "orphan": false,
-      "issuer": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-      "issuerName": "./src/scripts/views/pages/detail.js",
+      "issuer": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+      "issuerName": "./src/scripts/views/pages/favorite.js",
       "issuerPath": [
         {
           "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/index.js",
@@ -8473,16 +8501,16 @@
           "id": 705
         },
         {
-          "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-          "name": "./src/scripts/views/pages/detail.js",
-          "id": 178
+          "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+          "name": "./src/scripts/views/pages/favorite.js",
+          "id": 80
         }
       ],
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "id": 157,
-      "issuerId": 178,
+      "issuerId": 80,
       "chunks": [
         495
       ],
@@ -9221,9 +9249,9 @@
               "id": 705
             },
             {
-              "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-              "name": "./src/scripts/views/pages/detail.js",
-              "id": 178
+              "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+              "name": "./src/scripts/views/pages/favorite.js",
+              "id": 80
             },
             {
               "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/data/favorite-resto-idb.js",
@@ -9294,9 +9322,9 @@
               "id": 705
             },
             {
-              "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-              "name": "./src/scripts/views/pages/detail.js",
-              "id": 178
+              "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+              "name": "./src/scripts/views/pages/favorite.js",
+              "id": 80
             },
             {
               "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/data/favorite-resto-idb.js",
@@ -9503,9 +9531,9 @@
           "id": 705
         },
         {
-          "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/detail.js",
-          "name": "./src/scripts/views/pages/detail.js",
-          "id": 178
+          "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/views/pages/favorite.js",
+          "name": "./src/scripts/views/pages/favorite.js",
+          "id": 80
         },
         {
           "identifier": "/home/runner/work/Pinafood/Pinafood/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[0]!/home/runner/work/Pinafood/Pinafood/src/scripts/data/favorite-resto-idb.js",
@@ -9915,15 +9943,15 @@
         },
         {
           "name": "app~f6563343.bundle.js",
-          "size": 35265
+          "size": 35540
         },
         {
           "name": "app~04e4ec69.bundle.js",
-          "size": 34201
+          "size": 34145
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 271032,
+      "assetsSize": 271251,
       "auxiliaryAssets": [
         {
           "name": "2.bundle.js.map",
@@ -9935,7 +9963,7 @@
         },
         {
           "name": "app~04e4ec69.bundle.js.map",
-          "size": 40159
+          "size": 40065
         },
         {
           "name": "app~a51fa3f5.bundle.js.map",
@@ -9951,11 +9979,11 @@
         },
         {
           "name": "app~f6563343.bundle.js.map",
-          "size": 33329
+          "size": 33736
         }
       ],
       "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 287808,
+      "auxiliaryAssetsSize": 288121,
       "children": {},
       "childAssets": {},
       "isOverSizeLimit": false
@@ -9996,15 +10024,15 @@
         },
         {
           "name": "app~f6563343.bundle.js",
-          "size": 35265
+          "size": 35540
         },
         {
           "name": "app~04e4ec69.bundle.js",
-          "size": 34201
+          "size": 34145
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 271032,
+      "assetsSize": 271251,
       "auxiliaryAssets": [
         {
           "name": "2.bundle.js.map",
@@ -10016,7 +10044,7 @@
         },
         {
           "name": "app~04e4ec69.bundle.js.map",
-          "size": 40159
+          "size": 40065
         },
         {
           "name": "app~a51fa3f5.bundle.js.map",
@@ -10032,11 +10060,11 @@
         },
         {
           "name": "app~f6563343.bundle.js.map",
-          "size": 33329
+          "size": 33736
         }
       ],
       "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 287808,
+      "auxiliaryAssetsSize": 288121,
       "children": {},
       "childAssets": {},
       "isOverSizeLimit": false
@@ -10052,7 +10080,7 @@
       "hash": "62f55dc291aa30603653",
       "version": "5.81.0",
       "time": 95,
-      "builtAt": 1688471973099,
+      "builtAt": 1688478958181,
       "publicPath": "",
       "outputPath": "/home/runner/work/Pinafood/Pinafood/dist",
       "assetsByChunkName": {},

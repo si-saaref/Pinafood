@@ -23,7 +23,7 @@ var Home = {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            return _context.abrupt("return", "\n      <section class='content-container'>\n\t\t\t\t<div class=\"content-header\">\n\t\t\t\t\t<header class=\"content-header__label\">Explore Restaurant</header>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"content-post\">\n          ".concat((0,_templates_template_creator__WEBPACK_IMPORTED_MODULE_2__/* .cardRestoItemSkeleton */ .Xt)(10), "\n        </div>\n\t\t\t</section>\n    "));
+            return _context.abrupt("return", "\n      <section class='content-container'>\n\t\t\t\t<div class=\"content-header\">\n\t\t\t\t\t<header class=\"content-header__label\">Explore Restaurant</header>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"content-post\">\n          ".concat((0,_templates_template_creator__WEBPACK_IMPORTED_MODULE_2__/* .cardRestoItemSkeleton */ .Xt)(9), "\n        </div>\n\t\t\t</section>\n    "));
           case 1:
           case "end":
             return _context.stop();
@@ -44,19 +44,22 @@ var Home = {
             data = _yield$RestaurantServ.data;
             status = _yield$RestaurantServ.status;
             restaurantListContainer = document.querySelector('.content-post');
+            restaurantListContainer.innerHTML = '';
             if (!(status === 400)) {
-              _context2.next = 9;
+              _context2.next = 13;
               break;
             }
+            _utils_layout_helper__WEBPACK_IMPORTED_MODULE_1__/* ["default"].hideHeroImage */ .Z.hideHeroImage();
+            document.querySelector('.content-post').style.display = 'flex';
+            document.querySelector('.content-post').style.justifyContent = 'center';
             restaurantListContainer.innerHTML += (0,_templates_template_creator__WEBPACK_IMPORTED_MODULE_2__/* .notFoundContent */ .e2)();
             return _context2.abrupt("return");
-          case 9:
-            restaurantListContainer.innerHTML = '';
+          case 13:
             data.forEach(function (item) {
               restaurantListContainer.innerHTML += (0,_templates_template_creator__WEBPACK_IMPORTED_MODULE_2__/* .cardRestoItemTemplate */ .Qp)(item);
             });
             _utils_layout_helper__WEBPACK_IMPORTED_MODULE_1__/* ["default"].showHeroImage */ .Z.showHeroImage();
-          case 12:
+          case 15:
           case "end":
             return _context2.stop();
         }
