@@ -29,6 +29,9 @@ jobs:
       - name: Build Project
         run: yarn build
 
+      - name: Generare Image
+        run: yarn build-image
+
       - name: Upload production-ready file
         uses: actions/upload-artifact@v2
         with:
