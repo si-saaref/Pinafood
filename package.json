@@ -14,7 +14,8 @@
 		"serve": "http-server dist -p 8012",
 		"build-serve": "yarn build && yarn build-image && yarn serve",
 		"e2e": "codeceptjs run --steps",
-		"build-image": "node sharp.js"
+		"build-image": "node sharp.js",
+		"bundle-report": "webpack-bundle-analyzer --port 5000 dist/stats.json"
 	},
 	"keywords": [],
 	"author": "si-saaref achmadsyarif241@gmail.com",
