@@ -35,6 +35,7 @@ Scenario('Unliking a Restaurant', async ({ I }) => {
 	I.seeElement('.post-item__title a');
 
 	for (let i = 1; i <= 2; i++) {
+		I.waitForElement('.post-item__title a', 3);
 		I.click(locate('.post-item__title a').at(i));
 		I.waitForElement('#likeButton', 3);
 		I.seeElement('#likeButton');

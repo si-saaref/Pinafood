@@ -1,6 +1,10 @@
 import RestaurantServices from '../../data/data-source';
 import LayoutHelper from '../../utils/layout-helper';
-import { cardRestoItemTemplate, notFoundContent } from '../templates/template-creator';
+import {
+	cardRestoItemSkeleton,
+	cardRestoItemTemplate,
+	notFoundContent,
+} from '../templates/template-creator';
 
 const Home = {
 	async render() {
@@ -9,7 +13,9 @@ const Home = {
 				<div class="content-header">
 					<header class="content-header__label">Explore Restaurant</header>
 				</div>
-				<div class="content-post"></div>
+				<div class="content-post">
+          ${cardRestoItemSkeleton(10)}
+        </div>
 			</section>
     `;
 	},

@@ -452,6 +452,53 @@ body:has(.reveal-content) .hamburger-wrapper {
 	align-items: center;
 }
 
+/* 
+ * Skeleton
+ */
+.post-item-skeleton {
+	min-height: 450px;
+}
+
+.post-item-skeleton__content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.skeleton-image {
+	height: 60%;
+	width: 100%;
+	background: lightgray;
+	animation: skeleton-loading 1.6s linear infinite alternate;
+}
+
+.skeleton {
+	height: 10px;
+	background: lightgray;
+	animation: skeleton-loading 1.6s linear infinite alternate;
+}
+
+.skeleton-city {
+	width: 30%;
+}
+.skeleton-name {
+	width: 50%;
+}
+
+.post-item-skeleton__content.desc {
+	margin-top: 2rem;
+}
+
+@keyframes skeleton-loading {
+	0% {
+		background-color: hsl(201, 20%, 70%);
+	}
+	100% {
+		background-color: hsl(204, 20%, 85%);
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.content-post {
 		margin: 32px auto auto;

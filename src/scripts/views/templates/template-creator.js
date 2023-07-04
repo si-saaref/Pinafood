@@ -35,11 +35,36 @@ const generateListItemWithHighlight = ({ listData, type = '' }) => {
 		.join('');
 };
 
+export const cardRestoItemSkeleton = (count) => {
+	let template = '';
+
+	for (let i = 0; i < count; i += 1) {
+		template += `
+        <article class="post-item post-item-skeleton" tabindex="0">
+          <div class="skeleton-image"></div>
+          <div class="post-item__content post-item-skeleton__content">
+            <div class="skeleton skeleton-city"></div>
+            <div class="skeleton skeleton-name"></div>
+            <div class="post-item-skeleton__content desc">
+              <div class="skeleton skeleton-desc"></div>
+              <div class="skeleton skeleton-desc"></div>
+              <div class="skeleton skeleton-desc"></div>
+              <div class="skeleton skeleton-desc"></div>
+              <div class="skeleton skeleton-desc"></div>
+            </div>
+          </div>
+        </article>
+      `;
+	}
+	return template;
+};
+
 export const cardRestoItemTemplate = (restaurant) => `
   <article class="post-item" tabindex="0">
     <img
       class="post-item__thumbnail lazyload"
       data-src="${CONFIG.BASE_URL}/images/medium/${restaurant.pictureId}"
+      onerror="this.onerror=null; this.src='./images/grey.jpg"
       alt="Gambar ${restaurant.name}"
     />
     <div class="post-item__content">
