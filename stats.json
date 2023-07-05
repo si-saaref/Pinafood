@@ -1,8 +1,8 @@
 {
   "hash": "e0b2f725392e81c502e2",
   "version": "5.81.0",
-  "time": 6025,
-  "builtAt": 1688527245009,
+  "time": 6741,
+  "builtAt": 1688528312608,
   "publicPath": "auto",
   "outputPath": "/home/runner/work/Pinafood/Pinafood/dist",
   "assetsByChunkName": {
@@ -10079,8 +10079,8 @@
       "name": "HtmlWebpackCompiler",
       "hash": "62f55dc291aa30603653",
       "version": "5.81.0",
-      "time": 95,
-      "builtAt": 1688527239108,
+      "time": 156,
+      "builtAt": 1688528306055,
       "publicPath": "",
       "outputPath": "/home/runner/work/Pinafood/Pinafood/dist",
       "assetsByChunkName": {},
