@@ -56,6 +56,21 @@ module.exports = merge(common, {
 	plugins: [
 		new WorkboxWebpackPlugin.GenerateSW({
 			swDest: './sw.bundle.js',
+			skipWaiting: true,
+			clientsClaim: true,
+			runtimeCaching: [
+				{
+					// eslint-disable-next-line prefer-regex-literals
+					urlPattern: new RegExp('^https://restaurant-api.dicoding.dev/'),
+					handler: 'StaleWhileRevalidate',
+					options: {
+						cacheName: 'pinafood_cache_v1',
+						cacheableResponse: {
+							statuses: [0, 200],
+						},
+					},
+				},
+			],
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
