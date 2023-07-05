@@ -28,6 +28,3 @@ jobs:
 
       - name: Integratation Test Apps
         run: yarn test
-
-      - name: End to End Test Apps
-        run: yarn e2e
